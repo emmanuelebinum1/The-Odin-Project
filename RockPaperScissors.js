@@ -16,18 +16,22 @@ scissorsButton.addEventListener('click', choseScissors);
 
 const playerOne = document.querySelector(".Player1");
 const newParagraph = document.createElement("p");
+const choicesDisplay = document.querySelector(".choices");
 
 function choseRock() {
+    choicesDisplay.textContent = "";
     displayHumanChoice("Rock");
     humanChoice = 'Rock';
     playRound();
 }
 function chosePaper() {
+    choicesDisplay.textContent = "";
     displayHumanChoice("Paper");
     humanChoice = 'Paper';
     playRound();
 }
 function choseScissors() {
+    choicesDisplay.textContent = "";
     displayHumanChoice("Scissors");
     humanChoice = 'Scissors';
     playRound();
@@ -36,7 +40,7 @@ function choseScissors() {
 function displayHumanChoice(choice) {
     const newParagraph = document.createElement("p");
     newParagraph.textContent = `You chose ${choice}`;
-    playerOne.appendChild(newParagraph);
+    choicesDisplay.appendChild(newParagraph);
 }
 
 function getHumanChoice() {
@@ -49,7 +53,7 @@ function getComputerChoice() {
 
     const newParagraph = document.createElement("p");
     newParagraph.textContent = `Computer chose ${choiceNames[computerChoice]}`;
-    playerOne.appendChild(newParagraph);
+    choicesDisplay.appendChild(newParagraph);
 
     return computerChoice;
 }
@@ -94,7 +98,7 @@ function winnerAnnouncement() {
         message.textContent = `Its a Tie`;
 
     }
-    newParagraph.textContent = "";
+
 
 }
 
@@ -108,7 +112,7 @@ function startGame() {
     numberOfRounds = 0;
     message.textContent = "";
     scoreboard.textContent = "";
-    newParagraph.textContent = "";
+    choices.textContent = "";
     newGame.textContent = `New Game starts`;
 
 }
