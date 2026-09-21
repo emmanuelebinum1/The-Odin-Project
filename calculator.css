@@ -1,7 +1,9 @@
-.container {
+.buttonContainer {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-wrap: wrap;
+    /* align-content: center; */
+
 
 }
 
